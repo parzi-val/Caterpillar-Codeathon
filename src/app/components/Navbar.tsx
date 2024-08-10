@@ -21,7 +21,7 @@ const Navbar = () => {
   }
   
   return (
-    <div className="h-[16vh] w-full bg-[#faab35] flex items-center justify-between px-5">
+    <div className="sticky top-0 h-[16vh] w-full bg-[#faab35] flex items-center justify-between px-5">
       <div className="flex-1 flex flex-col md:flex-row md:items-center md:justify-start space-y-2 md:space-y-0 md:space-x-4">
         <HamBurgerDropDown value={isOpen} handleClick={() => setIsOpen(!isOpen)}/>
       </div>
@@ -29,8 +29,8 @@ const Navbar = () => {
         <button type='button' onClick={() => router.push('/')}><Image src={logo} alt="Logo" width={100} height={100} /></button>
       </div>
       <div className="flex-1 flex justify-end">
-        <button type='button' className="hover:bg-[#ed8a58] py-2 px-4" onClick={() => router.push('/')}> Sign In</button>
-        <button type='button' className="hover:bg-[#ed8a58] py-2 px-4" onClick={() => router.push('/')}> Register</button>
+        <button type='button' className="hover:bg-[#c17035] py-2 px-4" onClick={() => router.push('/')}> Sign In</button>
+        <button type='button' className="hover:bg-[#c17035] py-2 px-4" onClick={() => router.push('/')}> Register</button>
       </div>
     </div>
   )
