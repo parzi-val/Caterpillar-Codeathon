@@ -1,20 +1,14 @@
 # myapp/views.py
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import Truck, Inspection
+from .models import Truck, Inspection,Inspector
 from django.views.decorators.csrf import csrf_exempt
 import json
-from rest_framework.permissions import IsAuthenticated
-
-class ProtectedView(APIView):
-    permission_classes = [IsAuthenticated]
-
-    def get(self, request):
-        return Response({'message': 'You are authenticated!'})
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 
-class headers(APIView):
+class headers(LoginRequiredMixin,APIView):
     def post(self, request, format=None):
         data = request.data
         print(data)

@@ -1,15 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
+
 #from django.contrib.gis.db import models as gis_models
 
 
-class Inspector(AbstractUser):
+class Inspector(models.Model):
     inspector_id = models.CharField(max_length=20,primary_key=True)
-    email = models.EmailField(null=True,unique=True)
     inspector_name = models.CharField(max_length=255)
-    USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
-
 
 class Truck(models.Model):
     truck_serial_number = models.CharField(max_length=20,unique=True)

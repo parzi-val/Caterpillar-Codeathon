@@ -1,8 +1,8 @@
 # myapp/urls.py
 
 from django.urls import path, include
-from .views import headers
+from .views import login_view
 
 urlpatterns = [
-    path('headers/',headers.as_view())
+    path('login/',login_view)
 ]
