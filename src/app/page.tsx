@@ -8,10 +8,10 @@ export default function Home() {
       <Navbar  />
 
       <div className="flex flex-row justify-center items-center h-full">
-        <button className="bg-[#faab35] text-white px-6 py-3 m-4 rounded-md hover:bg-[#c17035]" onClick={()=> router.push('/Manual')}>
+        <button className="bg-[#faab35] text-white px-6 py-3 m-4 rounded-md hover:bg-[#c17035]" onClick={()=> router.push('/pages/manual')}>
           Manual Operation
         </button>
-        <button className="bg-[#faab35] text-white px-6 py-3 m-4 rounded-md hover:bg-[#c17035]"onClick={()=> router.push('/Voice')}>
+        <button className="bg-[#faab35] text-white px-6 py-3 m-4 rounded-md hover:bg-[#c17035]"onClick={()=> router.push('/pages/voice')}>
           Voice assistance
         </button>
       </div>
