@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Manual = () => {
+const Voice = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Manual = () => {
   )
 }
 
-export default Manual
+export default Voice
