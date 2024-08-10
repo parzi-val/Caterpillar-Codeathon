@@ -1,8 +1,8 @@
 # myapp/urls.py
 
 from django.urls import path, include
-from .views import login_view
+from .views import verify_token
 
 urlpatterns = [
-    path('login/',login_view)
+    path('login/',verify_token)
 ]

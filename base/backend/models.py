@@ -23,3 +23,5 @@ class Inspection(models.Model):
     inspector_signature = models.ImageField(upload_to='signatures/')
     customer_name = models.CharField(max_length=255)
     cat_customer_id = models.CharField(max_length=50,unique=True)
+    details = models.FileField(upload_to="inspections/")
+
