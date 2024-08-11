@@ -1,18 +1,23 @@
-'use client'
+'use client';
 import Navbar from "./components/Navbar";
-import {useRouter} from 'next/navigation'
+import { useRouter } from 'next/navigation';
+
 export default function Home() {
-  const router =useRouter();
+  const router = useRouter();
+
   return (
-    <main className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('./assets/Hero.png')" }}>
-      <Navbar  />
+    <main
+      className="relative h-screen bg-cover bg-center"
+      style={{ backgroundImage: "url('https://i.ibb.co/ggpjp2t/Screenshot-2024-08-11-120433.png')" }}
+    >
+      <Navbar />
 
       <div className="flex flex-row justify-center items-center h-full">
-        <button className="bg-[#faab35] text-white px-6 py-3 m-4 rounded-md hover:bg-[#c17035]" onClick={()=> router.push('/pages/manual')}>
+        <button
+          className="bg-[#faab35] text-white px-6 py-3 m-4 rounded-md hover:bg-[#c17035]"
+          onClick={() => router.push('/pages/manual')}
+        >
           Manual Operation
-        </button>
-        <button className="bg-[#faab35] text-white px-6 py-3 m-4 rounded-md hover:bg-[#c17035]"onClick={()=> router.push('/pages/voice')}>
-          Voice assistance
         </button>
       </div>
     </main>

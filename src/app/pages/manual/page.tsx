@@ -1,56 +1,27 @@
-'use client'
+'use client';
 
 import Navbar from '@/app/components/Navbar';
 import { useRouter } from 'next/navigation';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const Manual = () => {
   const router = useRouter();
 
   const customQuestions = [
-    "Location of Inspection",
-    "Date and Time of Inspection",
-    "What is your name?",
-    "What is your email?",
-    "What is your phone number?",
-    "What is your address?",
-    "What is your occupation?",
-    "What is your favorite hobby?",
-    "What is your birth date?",
-    "What is your favorite color?",
-    "What is your favorite food?",
-    "What is your favorite book?",
-    "What is your favorite movie?",
-    "What is your dream job?"
+    "Truck Serial Number",
+    "Truck Model",
+    "Inspection Employee ID",
+    "Inspector Name",
+    "Location of Inspection",         
+    "Service Meter Hours",
+    "Inspector signature",
+    "Client Name",
+    "CAT Customer ID",
   ];
 
   const [formValues, setFormValues] = useState(Array(customQuestions.length).fill(''));
   const [isSubmitted, setIsSubmitted] = useState(false);
-
-  // Fetching the location of inspection and date/time
-  useEffect(() => {
-    // Fetching location
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const location = `Lat: ${position.coords.latitude}, Long: ${position.coords.longitude}`;
-          handleChange(0, location); // Automatically populate the location in the first field
-        },
-        (error) => {
-          console.error('Error fetching location:', error);
-          handleChange(0, 'Location not available');
-        }
-      );
-    } else {
-      console.error('Geolocation is not supported by this browser.');
-      handleChange(0, 'Geolocation not supported');
-    }
-
-    // Fetching the date and time of inspection from user's system
-    const dateTime = new Date().toLocaleString();
-    handleChange(1, dateTime); // Automatically populate the date and time in the second field
-  }, []);
 
   const handleChange = (index: number, value: string) => {
     const updatedFormValues = [...formValues];
@@ -77,7 +48,7 @@ const Manual = () => {
       if (response.ok) {
         setIsSubmitted(true);
         console.log('Form submitted successfully');
-        router.push('/pages/tireinfo');
+        router.push('/pages/tireinfo'); 
       } else {
         console.error('Form submission failed');
       }
@@ -102,7 +73,6 @@ const Manual = () => {
                 className="border border-gray-300 p-2 rounded-md mr-4 flex-1"
                 placeholder={`Enter answer for "${question}"`}
                 required
-                readOnly={index === 0 || index === 1} // Make the location and date/time fields read-only
               />
               {formValues[index] && <FaCheckCircle className="text-green-500" />}
             </div>
