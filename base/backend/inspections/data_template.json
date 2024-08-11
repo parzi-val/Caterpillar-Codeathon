@@ -1,0 +1,92 @@
+{
+  "HEADER": {
+    "TSN": "",
+    "TM": "",
+    "IID": "",
+    "INAME": "",
+    "DATE&TIME": "",
+    "LOCATION": "",
+    "COORDS": "",
+    "SMH": "",
+    "INSSIGN": "",
+    "CLIENTNAME": "",
+    "CATID": ""
+  },
+  "DATA": {
+    "TIRES": {
+      "LFT": {
+        "Pressure": "",
+        "Condition": ""
+      },
+      "RFT": {
+        "Pressure": "",
+        "Condition": ""
+      },
+      "LRT": {
+        "Pressure": "",
+        "Condition": ""
+      },
+      "RRT": {
+        "Pressure": "",
+        "Condition": ""
+      }
+    },
+    "BATTERY": {
+      "Make": "",
+      "RD": "",
+      "Voltage": "",
+      "Water Level": "",
+      "Condition": {
+        "Damage": ""
+      },
+      "LR": ""
+    },
+    "EXTERIOR": {
+      "RND": {
+        "Present": ""
+      },
+      "OLS": ""
+    },
+    "BRAKES": {
+      "BFL": "",
+      "FBC": "",
+      "RBC": "",
+      "EB": ""
+    },
+    "ENGINE": {
+      "RND": {
+        "Present": ""
+      },
+      "EOC": "",
+      "EOColor": "",
+      "BFC": "",
+      "BFColor": "",
+      "OLE": ""
+    },
+    "Voice of Customer": {
+      "Feedback": ""
+    }
+  },
+  "IMAGES": {
+    "TIRES": {
+      "LFT": " ",
+      "RFT": " ",
+      "LRT": " ",
+      "RRT": " "
+    },
+    "BATTERY": {
+      "Condition": [],
+      "Images": []
+    },
+    "EXTERIOR": {
+      "Physical": [],
+      "Images": []
+    },
+    "BRAKES": [],
+    "ENGINES": {
+      "Physical": [],
+      "Images": []
+    },
+    "Customer": []
+  }
+}

@@ -20,7 +20,6 @@ class Inspection(models.Model):
     location = models.TextField()
     #geo_location = gis_models.PointField(null=True,blank=True)
     service_meter_hours = models.DecimalField(max_digits=10,decimal_places=4)
-    inspector_signature = models.ImageField(upload_to='signatures/')
     customer_name = models.CharField(max_length=255)
     cat_customer_id = models.CharField(max_length=50,unique=True)
     details = models.FileField(upload_to="inspections/")

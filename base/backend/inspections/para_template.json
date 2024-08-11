@@ -1,0 +1,66 @@
+{
+  "HEADER": {
+    "Truck Serial Number": "",
+    "Truck Model": "",
+    "Date and Time": "",
+    "Location": "",
+    "Service Meter Hours": "",
+    "Client Name": "",
+    "CAT Id": ""
+  },
+  "DATA": {
+    "TIRES": {
+      "Left Front Tire": {
+        "Pressure": "",
+        "Condition": ""
+      },
+      "Right Front Tire": {
+        "Pressure": "",
+        "Condition": ""
+      },
+      "Left Rear Tear": {
+        "Pressure": "",
+        "Condition": ""
+      },
+      "Rigt Rear Tire": {
+        "Pressure": "",
+        "Condition": ""
+      }
+    },
+    "BATTERY": {
+      "Make": "",
+      "Replacement Date": "",
+      "Voltage": "",
+      "Water Level": "",
+      "Condition": {
+        "Damage": ""
+      },
+      "Leak / Rust": ""
+    },
+    "EXTERIOR": {
+      "Rust, Dent and Damage": {
+        "Present": ""
+      },
+      "Oil Leak in Suspension": ""
+    },
+    "BRAKES": {
+      "Brake Fluid Level": "",
+      "Front Brake Condition": "",
+      "Rear Brake Condition": "",
+      "Emergency Brake": ""
+    },
+    "ENGINE": {
+      "Rust Dent or Damage": {
+        "Present": ""
+      },
+      "Engine Oil Condition": "",
+      "Engine Oil Color": "",
+      "Brake Fluid Condition": "",
+      "Brake Fluid Color": "",
+      "Oil Leak in Engine": ""
+    },
+    "Voice of Customer": {
+      "Feedback": ""
+    }
+  }
+}

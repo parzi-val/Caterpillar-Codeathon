@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-2q&dhae^wcnaq#b2yv_36dyw-o_k4=86#uwpn_h-7@g6td8r$8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.61.109']
 
 
 # Application definition
@@ -47,11 +47,13 @@ INSTALLED_APPS = [
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",  # Replace with your frontend URL
     'http://localhost:3000',
+    'http://192.168.61.109:8000'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:3000',
     'http://localhost:3000',
+    'http://192.168.61.109:8000'
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -69,7 +71,7 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    'firebaseauth.authentication.FirebaseBackend',  # Path to your custom backend
+    #'firebaseauth.authentication.FirebaseBackend',  # Path to your custom backend
     'django.contrib.auth.backends.ModelBackend',  # Default Django backend
 ]
 
@@ -144,12 +146,15 @@ USE_I18N = True
 
 USE_TZ = True
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-STATIC_URL = 'static/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+MEDIA_ROOT = BASE_DIR / 'static/images'
