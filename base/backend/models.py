@@ -21,6 +21,6 @@ class Inspection(models.Model):
     #geo_location = gis_models.PointField(null=True,blank=True)
     service_meter_hours = models.DecimalField(max_digits=10,decimal_places=4)
     customer_name = models.CharField(max_length=255)
-    cat_customer_id = models.CharField(max_length=50,unique=True)
+    cat_customer_id = models.CharField(max_length=50)
     details = models.FileField(upload_to="inspections/")
 

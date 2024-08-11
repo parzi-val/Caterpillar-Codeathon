@@ -1,7 +1,7 @@
 import google.generativeai as genai
 
 data = {
-  "HEADER": {
+  "HEADERS": {
     "Truck Serial Number": "SN123456",
     "Truck Model": "Model X",
     "Date and Time": "2024-08-11T15:30:00",
@@ -65,15 +65,18 @@ data = {
     }
   }
 
-apikey = ""
 
-genai.configure(api_key=apikey)
+def summarize(data):
+  apikey = "AIzaSyAuCs0wixtTLJpcVZwGSnLuPn428UbI1dc"
+  texts = {}
+  genai.configure(api_key=apikey)
 
-for k in data:
-    model = genai.GenerativeModel('gemini-1.5-flash')
-    print(data[k])
-    response = model.generate_content(
-        f"""Summarize the given json in 200 words and return the summary. 
-        {data[k]}""")
-    print(response.text)
-
+  for k in data:
+      model = genai.GenerativeModel('gemini-1.5-flash')
+      print(data[k])
+      response = model.generate_content(
+          f"""Summarize the given data in 200 words and return the summary. 
+          {data[k]}""")
+      texts[k] = response.text
+  print(texts)
+  return texts

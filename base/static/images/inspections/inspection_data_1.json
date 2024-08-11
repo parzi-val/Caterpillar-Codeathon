@@ -1,0 +1,55 @@
+{
+    "TIRES": {
+        "LFT": {
+            "Pressure": "32 PSI",
+            "Condition": "Good"
+        },
+        "RFT": {
+            "Pressure": "30 PSI",
+            "Condition": "Fair"
+        },
+        "LRT": {
+            "Pressure": "31 PSI",
+            "Condition": "Good"
+        },
+        "RRT": {
+            "Pressure": "29 PSI",
+            "Condition": "Poor"
+        }
+    },
+    "BATTERY": {
+        "Make": "Duracell",
+        "RD": "2024-07-15",
+        "Voltage": "12.6 V",
+        "Water Level": "Full",
+        "Condition": {
+            "Damage": "None"
+        },
+        "LR": "New"
+    },
+    "EXTERIOR": {
+        "RND": {
+            "Present": "Yes"
+        },
+        "OLS": "Clean"
+    },
+    "BRAKES": {
+        "BFL": "50%",
+        "FBC": "Good",
+        "RBC": "75%",
+        "EB": "Functional"
+    },
+    "ENGINE": {
+        "Rust Dent or Damage": {
+            "Present": "No"
+        },
+        "EOC": "Operational",
+        "EOColor": "Black",
+        "BFC": "Clean",
+        "BFColor": "Black",
+        "OLE": "Level Full"
+    },
+    "Voice of Customer": {
+        "Feedback": "Overall satisfied with the inspection."
+    }
+}

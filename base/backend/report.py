@@ -68,13 +68,13 @@ class ReportGenerator(SimpleDocTemplate):
                 ["Right Rear Tire",self.data["TIRES"]["RRT"]["Pressure"],self.data["TIRES"]["RRT"]["Condition"]]]
         table = Table(data)
         self.table_style(table)
-        
-        data = [["Left Front Tire","Right Front Tire"],
-                [self.image(self.images["TIRES"]["LFT"]),self.image(self.images["TIRES"]["RFT"])],
-                ["Left Rear Tire","Right Rear Tire"],
-                [self.image(self.images["TIRES"]["LRT"]),self.image(self.images["TIRES"]["RRT"])]]
-        table = Table(data)
-        self.table_style(table)
+        if self.isAvailable(self.images["TIRES"]):
+            data = [["Left Front Tire","Right Front Tire"],
+                    [self.image(self.images["TIRES"]["LFT"]),self.image(self.images["TIRES"]["RFT"])],
+                    ["Left Rear Tire","Right Rear Tire"],
+                    [self.image(self.images["TIRES"]["LRT"]),self.image(self.images["TIRES"]["RRT"])]]
+            table = Table(data)
+            self.table_style(table)
         self.elements.append(PageBreak())
        
     def battery(self):
@@ -158,11 +158,11 @@ class ReportGenerator(SimpleDocTemplate):
         self.elements.append(PageBreak())
     
     def voc(self):
-        self.paragraph("CUSTOMER",title="Voice of Customer")
+        self.paragraph("Voice of Customer",title="Voice of Customer")
 
-        addon = "" if self.isAvailable(self.images["Customer"]) else " not available."
+        addon = "" if self.isAvailable(self.images["CUSTOMER"]) else " not available."
 
-        images = [[f"Images{addon}", *[self.image(i) for i in self.images["Customer"]]]]
+        images = [[f"Images{addon}", *[self.image(i) for i in self.images["CUSTOMER"]]]]
         images_table = Table(images)
         self.table_style(images_table)
         self.elements.append(PageBreak())
