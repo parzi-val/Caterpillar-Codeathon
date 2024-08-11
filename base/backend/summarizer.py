@@ -67,7 +67,7 @@ data = {
 
 
 def summarize(data):
-  apikey = "AIzaSyAuCs0wixtTLJpcVZwGSnLuPn428UbI1dc"
+  apikey = ""
   texts = {}
   genai.configure(api_key=apikey)
 
